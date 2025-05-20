@@ -8,7 +8,7 @@ public class Main {
         String calificacionTres = JOptionPane.showInputDialog("Introduce la tercera calificación:");
 
         int sumaCalificacion = Integer.parseInt(calificacionUno) + Integer.parseInt(calificacionDos) + Integer.parseInt(calificacionTres);
-        int promedioCalificacion = sumaCalificacion / 3;
+        float promedioCalificacion = sumaCalificacion / 3f;
 
         System.out.println("El promedio de sus calificaciones es de: " + promedioCalificacion);
 
