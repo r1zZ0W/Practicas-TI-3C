@@ -1,3 +1,5 @@
+package U1_TI_01_CuadroDialogoSwing;
+
 import javax.swing.JOptionPane;
 public class CuadroDialogo {
 
