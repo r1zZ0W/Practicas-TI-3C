@@ -1,4 +1,4 @@
-package U1_T1_02_FigurasClases.Model;
+package U1_TI_02_FigurasClases.Model;
 
 public class CircleClass {
 

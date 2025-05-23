@@ -1,8 +1,8 @@
-package U1_T1_02_FigurasClases;
+package U1_TI_02_FigurasClases;
 
-import U1_T1_02_FigurasClases.Model.SquareClass;
-import U1_T1_02_FigurasClases.Model.CircleClass;
-import U1_T1_02_FigurasClases.Model.IsoscelesTriangle;
+import U1_TI_02_FigurasClases.Model.SquareClass;
+import U1_TI_02_FigurasClases.Model.CircleClass;
+import U1_TI_02_FigurasClases.Model.IsoscelesTriangle;
 
 public class FigurasClases {
 
