@@ -1,4 +1,4 @@
-package Model;
+package U1_T1_02_FigurasClases.Model;
 
 public class IsoscelesTriangle {
 

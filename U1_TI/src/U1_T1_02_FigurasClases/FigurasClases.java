@@ -1,10 +1,10 @@
 package U1_T1_02_FigurasClases;
 
-import Model.SquareClass;
-import Model.CircleClass;
-import Model.IsoscelesTriangle;
+import U1_T1_02_FigurasClases.Model.SquareClass;
+import U1_T1_02_FigurasClases.Model.CircleClass;
+import U1_T1_02_FigurasClases.Model.IsoscelesTriangle;
 
-public class CuadradoPractica {
+public class FigurasClases {
 
     public static void main(String[] args) {
 
