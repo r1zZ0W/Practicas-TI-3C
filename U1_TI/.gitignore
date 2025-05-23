@@ -1,4 +1,8 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
@@ -27,3 +31,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Asegurar que src no se ignore
+!src/

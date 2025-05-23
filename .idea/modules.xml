@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/U1_TI/src/U1_TI.iml" filepath="$PROJECT_DIR$/U1_TI/src/U1_TI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U1_TI/U1_TI2.iml" filepath="$PROJECT_DIR$/U1_TI/U1_TI2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/practica-2.0.iml" filepath="$PROJECT_DIR$/.idea/practica-2.0.iml" />
+    </modules>
+  </component>
+</project>
