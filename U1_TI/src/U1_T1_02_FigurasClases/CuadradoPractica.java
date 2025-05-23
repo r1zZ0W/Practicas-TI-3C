@@ -1,8 +1,8 @@
-package Practica_two;
+package U1_T1_02_FigurasClases;
 
-import Model_Practicatwo.SquareClass;
-import Model_Practicatwo.CircleClass;
-import Model_Practicatwo.IsoscelesTriangle;
+import Model.SquareClass;
+import Model.CircleClass;
+import Model.IsoscelesTriangle;
 
 public class CuadradoPractica {
 

@@ -1,4 +1,4 @@
-package Model_Practicatwo;
+package Model;
 
 public class IsoscelesTriangle {
 
