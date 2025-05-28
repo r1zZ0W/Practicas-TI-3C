@@ -57,11 +57,11 @@ public class CuentaBancaria {
 
     }
 
-    public void mensajeRetiro(boolean retiroExitoso){
+    public void mensajeRetiro(boolean retiroExitoso, double montoIntentado) {
 
         if (retiroExitoso) {
 
-            System.out.println("Retiro exitoso");
+            System.out.println("Retiro exitoso, monto retirado: $" + montoIntentado);
             System.out.println("El saldo actual es de: $" + saldo);
 
         }

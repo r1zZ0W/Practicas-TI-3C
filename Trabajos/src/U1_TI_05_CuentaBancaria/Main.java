@@ -18,11 +18,11 @@ public class Main {
 
         boolean retiroExitoso_1 = cuentaBancaria.retirar(200);
 
-        cuentaBancaria.mensajeRetiro(retiroExitoso_1);
+        cuentaBancaria.mensajeRetiro(retiroExitoso_1, 200);
 
         boolean retiroExitoso_2 = cuentaBancaria.retirar(10000);
 
-        cuentaBancaria.mensajeRetiro(retiroExitoso_2);
+        cuentaBancaria.mensajeRetiro(retiroExitoso_2, 10000);
 
     }
 
