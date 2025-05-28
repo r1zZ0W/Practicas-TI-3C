@@ -13,8 +13,6 @@ public class CuentaBancaria {
 
     public double getSaldo() {
 
-        System.out.println("El saldo actual es de: $" + saldo);
-
         return saldo;
 
     }
@@ -48,20 +46,29 @@ public class CuentaBancaria {
 
             saldo -= monto;
 
-            System.out.println("El retiro fue de: $" + monto);
-
-            System.out.println(true);
-
             return true;
 
         }
         else {
 
-            System.out.println("El monto no puede ser menor o igual que 0");
-
-            System.out.println(false);
-
             return false;
+
+        }
+
+    }
+
+    public void mensajeRetiro(boolean retiroExitoso){
+
+        if (retiroExitoso) {
+
+            System.out.println("Retiro exitoso");
+            System.out.println("El saldo actual es de: $" + saldo);
+
+        }
+        else {
+
+            System.out.println("Retiro fallido, saldo insuficiente o monto no válido");
+            System.out.println("El saldo actual es de: $" + saldo);
 
         }
 

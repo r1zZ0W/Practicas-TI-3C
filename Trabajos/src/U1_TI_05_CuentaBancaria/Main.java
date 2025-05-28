@@ -9,16 +9,20 @@ public class Main {
         CuentaBancaria  cuentaBancaria = new CuentaBancaria();
 
         cuentaBancaria.setTitular("Jorge Monjaraz");
+
         System.out.println("El titular es: " + cuentaBancaria.getTitular());
 
+        System.out.println("Saldo actual: $" + cuentaBancaria.getSaldo());
+
         cuentaBancaria.depositar(1000);
-        cuentaBancaria.getSaldo();
 
-        cuentaBancaria.retirar(200);
-        cuentaBancaria.getSaldo();
+        boolean retiroExitoso_1 = cuentaBancaria.retirar(200);
 
-        cuentaBancaria.retirar(10000);
-        cuentaBancaria.getSaldo();
+        cuentaBancaria.mensajeRetiro(retiroExitoso_1);
+
+        boolean retiroExitoso_2 = cuentaBancaria.retirar(10000);
+
+        cuentaBancaria.mensajeRetiro(retiroExitoso_2);
 
     }
 
