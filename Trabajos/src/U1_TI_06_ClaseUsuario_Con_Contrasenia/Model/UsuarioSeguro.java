@@ -35,7 +35,6 @@ public class UsuarioSeguro {
 
         boolean flag = true;
 
-        //Utilizo expreseiones regulares en la mayoria xd
         if (password.length() < 8) {
 
             System.out.println("La contraseña de be tener al menos 8 caracteres.");
