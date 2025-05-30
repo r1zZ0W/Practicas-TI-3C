@@ -71,6 +71,8 @@ public class UsuarioSeguro {
 
     public boolean autenticar(String intentPassword) {
 
+        if(this.password == null) return false;
+
         return this.password.equals(intentPassword);
 
     }
@@ -85,7 +87,7 @@ public class UsuarioSeguro {
 
         else {
 
-            System.out.println("No es la contraseña correcta.");
+            System.out.println("No haz podido ingresar, lo siento.");
 
         }
 
