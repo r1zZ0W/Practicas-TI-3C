@@ -33,11 +33,14 @@ public class UsuarioSeguro {
 
     public void setPassword(String password) {
 
+        boolean flag = true;
+
+        //Utilizo expreseiones regulares en la mayoria xd
         if (password.length() < 8) {
 
             System.out.println("La contraseña de be tener al menos 8 caracteres.");
 
-            return;
+            flag = false;
 
         }
 
@@ -45,7 +48,7 @@ public class UsuarioSeguro {
 
             System.out.println("La contraseña debe contener al menos una letra mayúscula.");
 
-            return;
+            flag = false;
 
         }
 
@@ -53,7 +56,7 @@ public class UsuarioSeguro {
 
             System.out.println("La contraseña debe contener al menos una letra minúscula.");
 
-            return;
+            flag = false;
 
         }
 
@@ -61,33 +64,33 @@ public class UsuarioSeguro {
 
             System.out.println("La contraseña debe contener al menos un número.");
 
-            return;
+            flag = false;
 
         }
 
-        this.password = password;
+        if (flag) {
+
+            this.password = password;
+
+        }
+
+
 
     }
 
     public boolean autenticar(String intentPassword) {
 
-        if(this.password == null) return false;
+        if(!intentPassword.equals(password)) {
 
-        return this.password.equals(intentPassword);
+            System.out.println("Contraseña incorrecta.");
 
-    }
+            return false;
 
-    public void autenticacionMensaje(String intento) {
+        } else {
 
-        if (autenticar(intento)) {
+            System.out.println("Autenticación exitosa. Bienvenido " + nombreUsuario + "!");
 
-            System.out.println("¡Autenticación exitosa! Bienvenido, " + nombreUsuario + ".");
-
-        }
-
-        else {
-
-            System.out.println("No haz podido ingresar, lo siento.");
+            return true;
 
         }
 
