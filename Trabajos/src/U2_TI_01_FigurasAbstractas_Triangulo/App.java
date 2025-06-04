@@ -1,12 +1,19 @@
+package U2_TI_01_FigurasAbstractas_Triangulo;
+
 import U2_TI_01_FigurasAbstractas_Triangulo.Model.*;
 
 public class App {
+
     public static void main(String[] args) throws Exception {
 
         FigureAbs sq = new Square(10);
+
         FigureAbs cir = new Circle(10);
+
         FigureAbs triangle = new Triangle(20, 25, 20);
+
         FigureAbs equilateralTriangle = new EquilateralTriangle(10, 10, 10);
+
         FigureAbs rightTriangle = new RightTriangle(10, 10, 10);
 
         FigureAbs[] figures = { sq, cir, triangle, equilateralTriangle, rightTriangle };
@@ -21,4 +28,5 @@ public class App {
         }
 
     }
+
 }

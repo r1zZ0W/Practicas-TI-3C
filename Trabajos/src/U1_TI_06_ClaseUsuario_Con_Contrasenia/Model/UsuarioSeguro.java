@@ -73,8 +73,6 @@ public class UsuarioSeguro {
 
         }
 
-
-
     }
 
     public boolean autenticar(String intentPassword) {

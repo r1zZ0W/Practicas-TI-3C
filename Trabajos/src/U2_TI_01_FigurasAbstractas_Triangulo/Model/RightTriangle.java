@@ -4,13 +4,13 @@ public class RightTriangle extends FigureAbs{
 
     private double base;
     private double height;
-    private double hypothenuse;
+    private double hypotenuse;
 
-    public RightTriangle(double base, double height, double hypothenuse) {
+    public RightTriangle(double base, double height, double hypotenuse) {
 
         this.base = base;
         this.height = height;
-        this.hypothenuse = hypothenuse;
+        this.hypotenuse = hypotenuse;
 
     }
 
@@ -38,15 +38,15 @@ public class RightTriangle extends FigureAbs{
 
     }
 
-    public double getHypothenuse() {
+    public double getHypotenuse() {
 
-        return hypothenuse;
+        return hypotenuse;
 
     }
 
-    public void setHypothenuse(double hypothenuse) {
+    public void setHypotenuse(double hypotenuse) {
 
-        this.hypothenuse = hypothenuse;
+        this.hypotenuse = hypotenuse;
 
     }
 
@@ -59,7 +59,7 @@ public class RightTriangle extends FigureAbs{
     @Override
     public double getPerimeter() {
 
-        return base + height + hypothenuse;
+        return base + height + hypotenuse;
 
     }
 
