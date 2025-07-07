@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
@@ -22,6 +23,9 @@ import org.controlsfx.control.spreadsheet.Grid;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    private Scene scene;
+    private boolean isDarkMode = false;
+    
     @Override
     public void start(Stage stage) throws IOException {
         
@@ -41,6 +45,9 @@ public class HelloApplication extends Application {
 
         GridPane form = new GridPane();
 
+        // Theme toggle button
+        ToggleButton themeToggle = new ToggleButton("🌙 Dark Mode");
+        themeToggle.setOnAction(e -> toggleTheme(themeToggle));
 
         Label lblName = new Label("Nombre");
         TextField tfName = new TextField();
@@ -62,19 +69,21 @@ public class HelloApplication extends Application {
             String age = tfAge.getText();
             String selection = comOptions.getSelectionModel().getSelectedItem();
 
-            if (name.isEmpty() || age.isEmpty() || selection.isEmpty()){
+            if (name.isEmpty() || age.isEmpty() || selection == null || selection.isEmpty()){
 
                 System.out.println("TODOS LOS CAMPOS SON OBLIGATORIOS");
 
-                lblResultado.setText("Todos los valores deben ser obligarotrios");
-                lblResultado.setStyle("-fx-text-fill: red;");
+                lblResultado.setText("Todos los valores deben ser obligatorios");
+                lblResultado.getStyleClass().removeAll("success-label", "error-label");
+                lblResultado.getStyleClass().add("error-label");
+                form.getStyleClass().removeAll("success-background");
 
             }else {
 
                 lblResultado.setText("Nombre: "+name +"\nEdad: "+age + "\nOpciones: "+selection);
-
-                lblResultado.setStyle("-fx-text-fill: darkgreen;");
-                form.setStyle("-fx-background-color: lightgreen;");
+                lblResultado.getStyleClass().removeAll("success-label", "error-label");
+                lblResultado.getStyleClass().add("success-label");
+                form.getStyleClass().add("success-background");
 
             }
         });
@@ -99,11 +108,14 @@ public class HelloApplication extends Application {
         form.add(comOptions, 1, 2);
 
         form.add(btnAceptar, 0, 3);
-        form.add(lblResultado, 0, 4);
+        form.add(lblResultado, 0, 4, 2, 1);
+        
+        form.add(themeToggle, 1, 5);
 
         //root.setPadding(new Insets(20));
         //root.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(form, 500, 700);
+        scene = new Scene(form, 500, 700);
+        applyTheme(); // Apply initial theme
 
         stage.setTitle("Primera App en JavaFX");
         Image image = new Image(getClass().getResourceAsStream("/icons/goku.png"));
@@ -111,6 +123,21 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
+    }
+    
+    private void toggleTheme(ToggleButton themeToggle) {
+        isDarkMode = !isDarkMode;
+        themeToggle.setText(isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode");
+        applyTheme();
+    }
+    
+    private void applyTheme() {
+        scene.getStylesheets().clear();
+        if (isDarkMode) {
+            scene.getStylesheets().add(getClass().getResource("/css/dark-theme.css").toExternalForm());
+        } else {
+            scene.getStylesheets().add(getClass().getResource("/css/light-theme.css").toExternalForm());
+        }
     }
 
     public static void main(String[] args) {
